@@ -1,6 +1,12 @@
+import React from 'react'
+import './CartWidget.css';
+
 function CartWidget() {
   return (
-    <div>CartWidget</div>
+    <div className='cart'>
+        <div>🛒</div>
+        <div>4</div>
+    </div>
   )
 }
 
