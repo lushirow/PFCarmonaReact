@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Coca-Cola",
+        "price": 350,
+        "pictureUrl": "https://jumboargentina.vtexassets.com/arquivos/ids/441468/Coca-Cola-25-L-3-17483.jpg?v=636528846231600000",
+        "tipo": "gaseosas"
+    },
+    {
+        "id": 2,
+        "title": "Fernet",
+        "price": 350,
+        "pictureUrl": "https://carrefourar.vtexassets.com/arquivos/ids/226775/7790290101602_02.jpg?v=637715449494370000",
+        "tipo": "alcohol"
+    },
+    {
+        "id": 3,
+        "title": "Fanta Chica",
+        "price": 150,
+        "pictureUrl": "https://lachimbotana.com.ar/wp-content/uploads/2020/06/Fanta500ml.png",
+        "tipo": "gaseosas"    
+    },
+    {
+        "id": 4,
+        "title": "Sprite",
+        "price": 300,
+        "pictureUrl": "https://depositoelmayorista.com.ar/wp-content/uploads/2019/12/unnamed-2.jpg",
+        "tipo": "gaseosas"
+    }
+]
