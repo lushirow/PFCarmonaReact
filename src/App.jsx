@@ -1,23 +1,46 @@
-import NavBar from './Components/NavBar';
-import ItemListContainer from './Components/ItemListContainer';
-import About from './Pages/About';
-import ItemDetailContainer from './Pages/ItemDetailContainer';
+import React from 'react';
+import './App.css';
+import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import CartView from './components/CartView/CartView';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { HashRouter, Route, Routes }  from 'react-router-dom';
+import { CartContextProvider } from './store/CartContext';
+import Footer from './components/Footer/footer';
+import CheckOut from './components/CheckOut/';
+import Contacto from './pages/Contacto/Contacto';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
-    <NavBar />
-  <Routes>
-    <Route path="/" element={<ItemListContainer />} />
-    <Route path='/category/:id' element={<ItemListContainer />} />
-    <Route path='/item/:id' element={<ItemDetailContainer />} />
-    <Route path="/about" element={<About />} />
-  </Routes>
-  </BrowserRouter>
+    <>
+    <CartContextProvider>
+    <HashRouter>
+      <NavBar />
+      <main>
+      <Routes>
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/item/:itemid" element={<ItemDetailContainer greeting="Detalle de producto"/>} />  
+        <Route path="/" element={<ItemListContainer greeting="Menú de Bizarre Bebidas!"/>} />
+        <Route path="/cart" element={<CartView greeting="Este es su carrito"/>} / >
+        {}
+        <Route path="/category/:categoryid" element={<ItemListContainer greeting="Categoría"/>} />
+      </Routes>
+      <hr />
+      <div className="back1">
+<div className="back1 back2">
+<div className="back1 back3">
+			</div>
+          </div>
+         </div>
+      </main>
+      <Footer />
+      </HashRouter>
+      </CartContextProvider>
+    </>
   );
 }
 
-export default App
+export default App;
