@@ -24,8 +24,7 @@ function App() {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/item/:itemid" element={<ItemDetailContainer greeting="Detalle de producto"/>} />  
         <Route path="/" element={<ItemListContainer greeting="Menú de Bizarre Bebidas!"/>} />
-        <Route path="/cart" element={<CartView greeting="Este es su carrito"/>} / >
-        {}
+        <Route path="/cart" element={<CartView greeting="Este es su carrito"/>} />
         <Route path="/category/:categoryid" element={<ItemListContainer greeting="Categoría"/>} />
       </Routes>
       <hr />
